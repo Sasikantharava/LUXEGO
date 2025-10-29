@@ -1,0 +1,34 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  flex: 1;
+  min-height: 100vh;
+  transition: var(--transition);
+}
+
+main.with-sidebar {
+  margin-left: var(--sidebar-width);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  main.with-sidebar {
+    margin-left: 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .table {
+    font-size: 0.875rem;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem 0.5rem;
+  }
+}

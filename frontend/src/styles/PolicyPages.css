@@ -1,0 +1,319 @@
+.policy-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: var(--white);
+}
+
+.policy-hero {
+  background: linear-gradient(135deg, rgba(110, 110, 230, 0.1) 0%, rgba(74, 74, 232, 0.1) 100%);
+  padding: 4rem 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #6E6EE6, #4A4AE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.policy-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.policy-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.policy-sidebar {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.policy-nav {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy-nav h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.nav-link {
+  display: block;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: rgba(110, 110, 230, 0.1);
+  color: #6E6EE6;
+  transform: translateX(5px);
+}
+
+.policy-main {
+  max-width: 800px;
+}
+
+.policy-section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.policy-section:nth-child(1) { animation-delay: 0.1s; }
+.policy-section:nth-child(2) { animation-delay: 0.2s; }
+.policy-section:nth-child(3) { animation-delay: 0.3s; }
+.policy-section:nth-child(4) { animation-delay: 0.4s; }
+.policy-section:nth-child(5) { animation-delay: 0.5s; }
+.policy-section:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.policy-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.policy-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #6E6EE6, #4A4AE8);
+  border-radius: 2px;
+}
+
+.policy-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.policy-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #6E6EE6;
+}
+
+.policy-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.policy-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policy-card li {
+  position: relative;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.policy-card li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #6E6EE6;
+  font-weight: bold;
+}
+
+.contact-details {
+  background: rgba(110, 110, 230, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+  color: var(--white);
+}
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.cookie-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cookie-row.header {
+  background: rgba(110, 110, 230, 0.1);
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.cookie-cell {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+}
+
+.policy-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1;
+}
+
+.policy-btn.primary {
+  background: linear-gradient(135deg, #6E6EE6, #4A4AE8);
+  color: white;
+}
+
+.policy-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(110, 110, 230, 0.3);
+}
+
+.policy-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.policy-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .policy-content {
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .policy-hero {
+    padding: 3rem 0;
+  }
+
+  .policy-title {
+    font-size: 2.5rem;
+  }
+
+  .policy-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .policy-sidebar {
+    position: static;
+  }
+
+  .policy-nav {
+    text-align: center;
+  }
+
+  .policy-actions {
+    flex-direction: column;
+  }
+
+  .cookie-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .cookie-row.header {
+    display: none;
+  }
+
+  .cookie-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--white);
+  }
+
+  .cookie-cell[data-label="Cookie Name"]::before { content: "Cookie Name: "; }
+  .cookie-cell[data-label="Purpose"]::before { content: "Purpose: "; }
+  .cookie-cell[data-label="Duration"]::before { content: "Duration: "; }
+}
+
+@media screen and (max-width: 480px) {
+  .policy-title {
+    font-size: 2rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-card {
+    padding: 1.5rem;
+  }
+
+  .policy-btn {
+    padding: 0.875rem 1.5rem;
+  }
+}
