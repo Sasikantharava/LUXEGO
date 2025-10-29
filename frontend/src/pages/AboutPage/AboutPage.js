@@ -31,7 +31,7 @@ const AboutPage = () => {
 
   const fetchAboutData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/about');
+      const response = await axios.get('https://luxego.onrender.com/api/about');
       const data = response.data;
       
       setAboutData({
