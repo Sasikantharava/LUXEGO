@@ -57,8 +57,8 @@ const Dashboard = () => {
       };
 
       const [statsResponse, bookingsResponse] = await Promise.all([
-        axios.get('http://localhost:5000/api/bookings/stats/dashboard', config),
-        axios.get('http://localhost:5000/api/bookings', config),
+        axios.get('https://luxego.onrender.com/api/bookings/stats/dashboard', config),
+        axios.get('https://luxego.onrender.com/api/bookings', config),
       ]);
 
       setStats(statsResponse.data);

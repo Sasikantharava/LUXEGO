@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
 });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/car_detailing', {
+mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI=mongodb+srv://sasikanth56789:mern123@cluster0.8u70rcx.mongodb.net/?appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

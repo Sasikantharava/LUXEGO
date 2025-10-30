@@ -31,7 +31,7 @@ const ContactPage = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('https://luxego.onrender.com/api/contact', formData);
       setSubmitMessage('Booking request submitted successfully! We will contact you soon.');
       setFormData({
         name: '',

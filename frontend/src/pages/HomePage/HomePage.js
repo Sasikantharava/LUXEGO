@@ -31,14 +31,14 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
         // Fetch reviews
-        const reviewsResponse = await axios.get('http://localhost:5000/api/reviews');
+        const reviewsResponse = await axios.get('https://luxego.onrender.com/api/reviews');
         const approvedReviews = reviewsResponse.data
           .filter(review => review.isApproved)
           .slice(0, 5);
         setReviews(approvedReviews);
 
         // Fetch about data for stats
-        const aboutResponse = await axios.get('http://localhost:5000/api/about');
+        const aboutResponse = await axios.get('https://luxego.onrender.com/api/about');
         const aboutData = aboutResponse.data;
         
         // Set stats from about data

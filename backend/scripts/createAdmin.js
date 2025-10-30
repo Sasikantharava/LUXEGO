@@ -7,7 +7,7 @@ dotenv.config();
 
 const createAdmin = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/car-detailing', {
+    await mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI=mongodb+srv://sasikanth56789:mern123@cluster0.8u70rcx.mongodb.net/?appName=Cluster0', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });

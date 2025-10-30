@@ -16,7 +16,7 @@ const Contacts = () => {
   const fetchContacts = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('http://localhost:5000/api/contact', {
+      const response = await axios.get('https://luxego.onrender.com/api/contact', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setContacts(response.data);
@@ -31,7 +31,7 @@ const Contacts = () => {
     try {
       const token = localStorage.getItem('adminToken');
       await axios.put(
-        `http://localhost:5000/api/contact/${contactId}`,
+        `https://luxego.onrender.com/api/contact/${contactId}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -45,7 +45,7 @@ const Contacts = () => {
     if (window.confirm('Are you sure you want to delete this contact?')) {
       try {
         const token = localStorage.getItem('adminToken');
-        await axios.delete(`http://localhost:5000/api/contact/${contactId}`, {
+        await axios.delete(`https://luxego.onrender.com/api/contact/${contactId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         fetchContacts();

@@ -15,7 +15,7 @@ const ServicesPage = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/services');
+      const response = await axios.get('https://luxego.onrender.com/api/services');
       // Separate main services and additional services
       const mainServices = response.data.filter(service => 
         !service.title.toLowerCase().includes('headlight') &&

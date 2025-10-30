@@ -25,7 +25,7 @@ const Login = ({ onLogin }) => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', credentials);
+      const response = await axios.post('https://luxego.onrender.com/api/admin/login', credentials);
       
       localStorage.setItem('adminToken', response.data.token);
       localStorage.setItem('adminUser', JSON.stringify(response.data));

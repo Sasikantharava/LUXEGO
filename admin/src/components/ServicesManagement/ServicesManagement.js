@@ -29,7 +29,7 @@ const ServicesManagement = () => {
   const fetchServices = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('http://localhost:5000/api/services/admin', {
+      const response = await axios.get('https://luxego.onrender.com/api/services/admin', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setServices(response.data);
@@ -81,12 +81,12 @@ const ServicesManagement = () => {
       if (imageFile) submitData.append('image', imageFile);
 
       if (editingService) {
-        await axios.put(`http://localhost:5000/api/services/${editingService._id}`, submitData, {
+        await axios.put(`https://luxego.onrender.com/api/services/${editingService._id}`, submitData, {
           headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' }
         });
         setMessage('✅ Service updated successfully!');
       } else {
-        await axios.post('http://localhost:5000/api/services', submitData, {
+        await axios.post('https://luxego.onrender.com/api/services', submitData, {
           headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' }
         });
         setMessage('✅ Service created successfully!');
@@ -138,7 +138,7 @@ const ServicesManagement = () => {
     if (window.confirm('Are you sure you want to delete this service?')) {
       try {
         const token = localStorage.getItem('adminToken');
-        await axios.delete(`http://localhost:5000/api/services/${serviceId}`, {
+        await axios.delete(`https://luxego.onrender.com/api/services/${serviceId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setMessage('🗑️ Service deleted successfully!');
@@ -217,7 +217,7 @@ const ServicesManagement = () => {
                   <input type="file" accept="image/*" onChange={(e) => setImageFile(e.target.files[0])} />
                   {editingService?.image && (
                     <div className="current-image">
-                      <img src={`http://localhost:5000${editingService.image}`} alt="Current" />
+                      <img src={`https://luxego.onrender.com${editingService.image}`} alt="Current" />
                     </div>
                   )}
                 </div>
@@ -270,7 +270,7 @@ const ServicesManagement = () => {
           <div key={service._id} className="service-card">
             {service.image && (
               <div className="service-image">
-                <img src={`http://localhost:5000${service.image}`} alt={service.title} />
+                <img src={`https://luxego.onrender.com${service.image}`} alt={service.title} />
               </div>
             )}
             <div className="service-content">

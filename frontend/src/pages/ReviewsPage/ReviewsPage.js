@@ -23,7 +23,7 @@ const ReviewsPage = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/reviews');
+      const response = await axios.get('https://luxego.onrender.com/api/reviews');
       setReviews(response.data);
       calculateStats(response.data);
     } catch (error) {
@@ -64,7 +64,7 @@ const ReviewsPage = () => {
     setIsSubmitting(true);
     
     try {
-      await axios.post('http://localhost:5000/api/reviews', newReview);
+      await axios.post('https://luxego.onrender.com/api/reviews', newReview);
       setNewReview({ name: '', rating: 5, comment: '', vehicle: '' });
       fetchReviews(); // Refresh reviews and stats after submission
     } catch (error) {

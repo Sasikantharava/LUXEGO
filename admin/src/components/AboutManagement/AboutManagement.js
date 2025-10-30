@@ -38,7 +38,7 @@ const AboutManagement = () => {
 
   const fetchAboutData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/about');
+      const response = await axios.get('https://luxego.onrender.com/api/about');
       const data = response.data;
       setAboutData(prev => ({
         ...prev,
@@ -130,7 +130,7 @@ const AboutManagement = () => {
     setMessage('');
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.put('http://localhost:5000/api/about', aboutData, {
+      await axios.put('https://luxego.onrender.com/api/about', aboutData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMessage('✅ About page updated successfully!');

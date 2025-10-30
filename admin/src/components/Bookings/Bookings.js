@@ -26,7 +26,7 @@ const Bookings = () => {
   const fetchBookings = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('http://localhost:5000/api/bookings', {
+      const response = await axios.get('https://luxego.onrender.com/api/bookings', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(response.data);
@@ -41,7 +41,7 @@ const Bookings = () => {
     try {
       const token = localStorage.getItem('adminToken');
       await axios.put(
-        `http://localhost:5000/api/bookings/${bookingId}`,
+        `https://luxego.onrender.com/api/bookings/${bookingId}`,
         { workStatus: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );

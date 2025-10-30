@@ -22,7 +22,7 @@ const GalleryPage = () => {
 
   const fetchGalleryItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/gallery');
+      const response = await axios.get('https://luxego.onrender.com/api/gallery');
       setGalleryItems(response.data);
       setLoading(false);
     } catch (error) {
@@ -108,7 +108,7 @@ const GalleryPage = () => {
                 <div className="image-container">
                   {image.imageUrl ? (
                     <img 
-                      src={image.imageType === 'upload' ? `http://localhost:5000${image.imageUrl}` : image.imageUrl}
+                      src={image.imageType === 'upload' ? `https://luxego.onrender.com${image.imageUrl}` : image.imageUrl}
                       alt={image.title}
                       className="gallery-image"
                       onError={(e) => {
@@ -149,7 +149,7 @@ const GalleryPage = () => {
             <div className="modal-image">
               {selectedImage.imageUrl ? (
                 <img 
-                  src={selectedImage.imageType === 'upload' ? `http://localhost:5000${selectedImage.imageUrl}` : selectedImage.imageUrl}
+                  src={selectedImage.imageType === 'upload' ? `https://luxego.onrender.com${selectedImage.imageUrl}` : selectedImage.imageUrl}
                   alt={selectedImage.title}
                   className="modal-real-image"
                 />

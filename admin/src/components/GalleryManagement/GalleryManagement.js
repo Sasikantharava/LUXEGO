@@ -25,7 +25,7 @@ const GalleryManagement = () => {
   const fetchGalleryItems = async () => {
     try {
       const token = localStorage.getItem("adminToken");
-      const response = await axios.get("http://localhost:5000/api/gallery", {
+      const response = await axios.get("https://luxego.onrender.com/api/gallery", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setGalleryItems(response.data);
@@ -65,7 +65,7 @@ const GalleryManagement = () => {
 
       if (editingItem) {
         await axios.put(
-          `http://localhost:5000/api/gallery/${editingItem._id}`,
+          `https://luxego.onrender.com/api/gallery/${editingItem._id}`,
           submitData,
           {
             headers: {
@@ -78,7 +78,7 @@ const GalleryManagement = () => {
           }
         );
       } else {
-        await axios.post("http://localhost:5000/api/gallery", submitData, {
+        await axios.post("https://luxego.onrender.com/api/gallery", submitData, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type":
@@ -129,7 +129,7 @@ const GalleryManagement = () => {
     if (window.confirm("Are you sure you want to delete this gallery item?")) {
       try {
         const token = localStorage.getItem("adminToken");
-        await axios.delete(`http://localhost:5000/api/gallery/${itemId}`, {
+        await axios.delete(`https://luxego.onrender.com/api/gallery/${itemId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         fetchGalleryItems();
@@ -141,7 +141,7 @@ const GalleryManagement = () => {
 
   const getImageUrl = (item) => {
     if (item.imageType === "upload") {
-      return `http://localhost:5000${item.imageUrl}`;
+      return `https://luxego.onrender.com${item.imageUrl}`;
     }
     return item.imageUrl;
   };

@@ -14,7 +14,7 @@ const Reviews = () => {
   const fetchReviews = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('http://localhost:5000/api/reviews/admin', {
+      const response = await axios.get('https://luxego.onrender.com/api/reviews/admin', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReviews(response.data);
@@ -29,7 +29,7 @@ const Reviews = () => {
     try {
       const token = localStorage.getItem('adminToken');
       await axios.put(
-        `http://localhost:5000/api/reviews/${reviewId}/approve`,
+        `https://luxego.onrender.com/api/reviews/${reviewId}/approve`,
         { approve },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -43,7 +43,7 @@ const Reviews = () => {
     try {
       const token = localStorage.getItem('adminToken');
       await axios.put(
-        `http://localhost:5000/api/reviews/${reviewId}/feature`,
+        `https://luxego.onrender.com/api/reviews/${reviewId}/feature`,
         { featured },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -57,7 +57,7 @@ const Reviews = () => {
     if (window.confirm('Are you sure you want to delete this review?')) {
       try {
         const token = localStorage.getItem('adminToken');
-        await axios.delete(`http://localhost:5000/api/reviews/${reviewId}`, {
+        await axios.delete(`https://luxego.onrender.com/api/reviews/${reviewId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         fetchReviews();
