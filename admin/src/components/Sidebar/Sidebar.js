@@ -57,11 +57,11 @@ const Sidebar = ({ onLogout, adminUser }) => {
         <div className="sidebar-header">
           <div className="logo">
             <div className="logo-image1">
-              {/* <img src="logo.png" alt="EliteAuto Care" /> */}
+              {/* <img src="logo.png" alt="LuxegoAuto Care" /> */}
             </div>
             {!isCollapsed && (
               <div className="logo-text">
-                <img src="logo.png" alt="EliteAuto Care" className="logo-full" />
+                <img src="logo.png" alt="Luxego Auto Care" className="logo-full" />
               </div>
             )}
           </div>

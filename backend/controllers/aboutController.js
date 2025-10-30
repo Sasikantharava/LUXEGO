@@ -10,7 +10,7 @@ const getAbout = async (req, res) => {
     if (!about) {
       // Create default about content if none exists
       about = await About.create({
-        companyName: 'EliteAuto Care',
+        companyName: 'LuxegoAuto Care',
         description: 'Premium car detailing services with over a decade of experience.',
         mission: 'To provide exceptional automotive detailing services that exceed customer expectations through innovative techniques, premium products, and unwavering commitment to quality.',
         vision: 'To become the most trusted name in automotive care.',
@@ -43,7 +43,7 @@ const getAbout = async (req, res) => {
         ],
         contactInfo: {
           phone: '+91 9876543210',
-          email: 'info@eliteautocare.com',
+          email: 'info@luxegoautocare.com',
           address: '123 Auto Street, City, State 560001',
           workingHours: 'Mon-Sat: 9AM-6PM, Sun: 10AM-4PM'
         },

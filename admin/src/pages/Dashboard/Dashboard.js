@@ -115,7 +115,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <div className="dashboard-header">
         <h1>Dashboard</h1>
-        <p>Welcome to EliteAuto Care Admin Panel</p>
+        <p>Welcome to LuxegoAuto Care Admin Panel</p>
       </div>
 
       {/* Stats Cards */}
